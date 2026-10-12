@@ -1,0 +1,22 @@
+baseURL = "https://diandre.varastyre.net/"
+languageCode = "nb-no"
+title = "Koret Diandre"
+defaultContentLanguage = "nb"
+disableAliases = true
+
+[params]
+  dateFormat = "2. januar 2006"
+  email = "leder@diandre.no"
+  vipps = "658600"
+  description = "Oslo-basert kor med groovy og stemningsfulle sanger"
+
+[taxonomies]
+  tag = "tags"
+
+buildFuture = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[services.googleAnalytics]
+  ID = ""

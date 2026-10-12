@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: YOUR_USERNAME/diandre.no
+  branch: main
+  open_authoring: true
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "arrangement"
+    label: "Arrangement"
+    folder: "content/arrangement"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Tittel", name: "title", widget: "string" }
+      - { label: "Dato", name: "date", widget: "datetime" }
+      - { label: "Sluttid", name: "enddate", widget: "datetime", required: false }
+      - { label: "Sted", name: "place", widget: "string" }
+      - { label: "Dører åpner", name: "doorsOpen", widget: "string", required: false }
+      - { label: "Plakat", name: "poster", widget: "image", required: false }
+      - { label: "Pris/Vipps", name: "vipps", widget: "string" }
+      - { label: "Innhold", name: "body", widget: "markdown" }
+
+  - name: "nyheter"
+    label: "Nyhet"
+    folder: "content/nyheter"
+    create: true
+    fields:
+      - { label: "Tittel", name: "title", widget: "string" }
+      - { label: "Dato", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Tekst", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Sider"
+    folder: "content"
+    create: false
+    files:
+      - { file: "content/om.md", label: "Om oss", name: "om", fields: [{label: "Tittel", name: "title", widget: "string"}, {label: "Innhold", name: "body", widget: "markdown"}] }
+      - { file: "content/bli-med.md", label: "Bli med", name: "bli-med", fields: [{label: "Tittel", name: "title", widget: "string"}, {label: "Innhold", name: "body", widget: "markdown"}] }
+      - { file: "content/kontakt.md", label: "Kontakt", name: "kontakt", fields: [{label: "Tittel", name: "title", widget: "string"}, {label: "Innhold", name: "body", widget: "markdown"}] }
