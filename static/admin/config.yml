@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_USERNAME/diandre.no
+  repo: jarleb/diandre
   branch: main
   open_authoring: true
 
